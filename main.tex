@@ -1,0 +1,69 @@
+\documentclass[10pt,a4paper]{article}
+
+% ============================================================
+% Packages
+% ============================================================
+
+\usepackage{fontspec}
+\usepackage[
+    top=12mm,
+    bottom=12mm,
+    left=15mm,
+    right=15mm
+]{geometry}
+
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fontawesome5}
+\usepackage{parskip}
+
+% ============================================================
+% Font
+% ============================================================
+
+\setmainfont{Inter}
+
+% ============================================================
+% Hyperlinks
+% ============================================================
+
+\hypersetup{
+    colorlinks=true,
+    urlcolor=black,
+    linkcolor=black,
+    pdftitle={Shayan Javaheri - DevOps Engineer},
+    pdfauthor={Shayan Javaheri}
+}
+
+% ============================================================
+% Custom Style
+% ============================================================
+
+\usepackage{styles/resume}
+
+% ============================================================
+% Candidate Data
+% ============================================================
+
+\input{data/cv}
+
+% ============================================================
+% Document
+% ============================================================
+
+\begin{document}
+
+% Header
+\makecvheader
+
+% Sections
+\input{sections/summary}
+\input{sections/skills}
+\input{sections/experience}
+\input{sections/projects}
+\input{sections/education}
+\input{sections/certifications}
+
+\end{document}

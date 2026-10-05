@@ -1,0 +1,107 @@
+\ProvidesPackage{resume}
+
+% ============================================================
+% Colors
+% ============================================================
+
+\definecolor{PrimaryText}{HTML}{1F2933}
+\definecolor{SecondaryText}{HTML}{4B5563}
+\definecolor{Accent}{HTML}{1F4E79}
+
+% ============================================================
+% General Layout
+% ============================================================
+
+\setlength{\parindent}{0pt}
+
+\setlist[itemize]{
+    leftmargin=*,
+    itemsep=2pt,
+    topsep=2pt,
+    parsep=0pt,
+    partopsep=0pt
+}
+
+% ============================================================
+% Section Titles
+% ============================================================
+
+\titleformat{\section}
+    {\large\bfseries\color{PrimaryText}}
+    {}
+    {0pt}
+    {}
+    [\vspace{-4pt}\titlerule]
+
+\titlespacing*{\section}
+    {0pt}
+    {10pt}
+    {5pt}
+
+% ============================================================
+% Header
+% ============================================================
+
+\newcommand{\makecvheader}{
+
+    \begin{center}
+
+        {\fontsize{22}{26}\selectfont
+        \bfseries
+        \color{PrimaryText}
+        \CandidateName
+        }
+
+        \vspace{3pt}
+
+        {\large
+        \color{Accent}
+        \CandidateTitle
+        }
+
+        \vspace{6pt}
+
+        {\small
+        \color{SecondaryText}
+
+        \faEnvelope\ 
+        \href{mailto:\CandidateEmail}{\CandidateEmail}
+        \quad
+        \textbar
+        \quad
+        \faLinkedin\ 
+        \href{https://\CandidateLinkedIn}{\CandidateLinkedIn}
+        }
+
+    \end{center}
+
+    \vspace{4pt}
+}
+
+% ============================================================
+% Experience Entry
+% ============================================================
+
+\newcommand{\experienceentry}[3]{
+
+    \textbf{\color{PrimaryText}#1}
+    \hfill
+    {\small\color{SecondaryText}#3}
+
+    \textit{\color{SecondaryText}#2}
+
+    \vspace{2pt}
+}
+
+% ============================================================
+% Project Entry
+% ============================================================
+
+\newcommand{\projectentry}[2]{
+
+    \textbf{\color{PrimaryText}#1}
+
+    {\small\color{SecondaryText}#2}
+
+    \vspace{2pt}
+}
