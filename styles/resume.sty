@@ -4,30 +4,36 @@
 % Colors
 % ============================================================
 
-\definecolor{PrimaryText}{HTML}{1F2933}
+\definecolor{PrimaryText}{HTML}{202124}
 \definecolor{SecondaryText}{HTML}{4B5563}
 \definecolor{Accent}{HTML}{1F4E79}
 
 % ============================================================
-% General Layout
+% General
 % ============================================================
 
 \setlength{\parindent}{0pt}
 
+\setlength{\parskip}{0pt}
+
+% ============================================================
+% Lists
+% ============================================================
+
 \setlist[itemize]{
-    leftmargin=*,
+    leftmargin=14pt,
     itemsep=2pt,
-    topsep=2pt,
+    topsep=3pt,
     parsep=0pt,
     partopsep=0pt
 }
 
 % ============================================================
-% Section Titles
+% Sections
 % ============================================================
 
 \titleformat{\section}
-    {\large\bfseries\color{PrimaryText}}
+    {\normalsize\bfseries\color{PrimaryText}}
     {}
     {0pt}
     {}
@@ -55,6 +61,7 @@
         \vspace{3pt}
 
         {\large
+        \bfseries
         \color{Accent}
         \CandidateTitle
         }
@@ -63,23 +70,22 @@
 
         {\small
         \color{SecondaryText}
-
         \faEnvelope\ 
         \href{mailto:\CandidateEmail}{\CandidateEmail}
         \quad
         \textbar
         \quad
         \faLinkedin\ 
-        \href{https://\CandidateLinkedIn}{\CandidateLinkedIn}
+        \href{https://\CandidateLinkedIn}{LinkedIn}
         }
 
     \end{center}
 
-    \vspace{4pt}
+    \vspace{2pt}
 }
 
 % ============================================================
-% Experience Entry
+% Experience
 % ============================================================
 
 \newcommand{\experienceentry}[3]{
@@ -94,7 +100,7 @@
 }
 
 % ============================================================
-% Project Entry
+% Project
 % ============================================================
 
 \newcommand{\projectentry}[2]{
