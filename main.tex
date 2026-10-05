@@ -1,33 +1,21 @@
 \documentclass[10pt,a4paper]{article}
 
-% ============================================================
-% Packages
-% ============================================================
-
 \usepackage{fontspec}
+
 \usepackage[
-    top=12mm,
-    bottom=12mm,
-    left=15mm,
-    right=15mm
+    top=10mm,
+    bottom=10mm,
+    left=14mm,
+    right=14mm
 ]{geometry}
 
 \usepackage{xcolor}
 \usepackage{hyperref}
 \usepackage{enumitem}
 \usepackage{titlesec}
-\usepackage{fontawesome5}
 \usepackage{parskip}
 
-% ============================================================
-% Font
-% ============================================================
-
 \setmainfont{TeX Gyre Heros}
-
-% ============================================================
-% Hyperlinks
-% ============================================================
 
 \hypersetup{
     colorlinks=true,
@@ -37,28 +25,14 @@
     pdfauthor={Shayan Javaheri}
 }
 
-% ============================================================
-% Custom Style
-% ============================================================
-
 \usepackage{styles/resume}
-
-% ============================================================
-% Candidate Data
-% ============================================================
 
 \input{data/cv}
 
-% ============================================================
-% Document
-% ============================================================
-
 \begin{document}
 
-% Header
 \makecvheader
 
-% Sections
 \input{sections/summary}
 \input{sections/skills}
 \input{sections/experience}
